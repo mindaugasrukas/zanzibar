@@ -250,8 +250,12 @@ func (c *corgeClient) EchoString(
 			return clientErr
 		}, nil)
 		if err == nil {
-			// ckt-breaker was ok, bubble up client error if set
+			// circuit-breaker was ok, bubble up client error if set (and log it)
 			err = clientErr
+			// This is just to debug (temporary)
+			if err != nil {
+				logger.Warn("Client attempt failure: TChannel client call returned error", zap.Error(err))
+			}
 		}
 	}
 

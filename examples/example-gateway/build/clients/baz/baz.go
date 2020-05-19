@@ -405,8 +405,12 @@ func (c *bazClient) EchoBinary(
 			return clientErr
 		}, nil)
 		if err == nil {
-			// ckt-breaker was ok, bubble up client error if set
+			// circuit-breaker was ok, bubble up client error if set (and log it)
 			err = clientErr
+			// This is just to debug (temporary)
+			if err != nil {
+				logger.Warn("Client attempt failure: TChannel client call returned error", zap.Error(err))
+			}
 		}
 	}
 
@@ -460,8 +464,12 @@ func (c *bazClient) EchoBool(
 			return clientErr
 		}, nil)
 		if err == nil {
-			// ckt-breaker was ok, bubble up client error if set
+			// circuit-breaker was ok, bubble up client error if set (and log it)
 			err = clientErr
+			// This is just to debug (temporary)
+			if err != nil {
+				logger.Warn("Client attempt failure: TChannel client call returned error", zap.Error(err))
+			}
 		}
 	}
 
@@ -515,8 +523,12 @@ func (c *bazClient) EchoDouble(
 			return clientErr
 		}, nil)
 		if err == nil {
-			// ckt-breaker was ok, bubble up client error if set
+			// circuit-breaker was ok, bubble up client error if set (and log it)
 			err = clientErr
+			// This is just to debug (temporary)
+			if err != nil {
+				logger.Warn("Client attempt failure: TChannel client call returned error", zap.Error(err))
+			}
 		}
 	}
 
@@ -570,8 +582,12 @@ func (c *bazClient) EchoEnum(
 			return clientErr
 		}, nil)
 		if err == nil {
-			// ckt-breaker was ok, bubble up client error if set
+			// circuit-breaker was ok, bubble up client error if set (and log it)
 			err = clientErr
+			// This is just to debug (temporary)
+			if err != nil {
+				logger.Warn("Client attempt failure: TChannel client call returned error", zap.Error(err))
+			}
 		}
 	}
 
@@ -625,8 +641,12 @@ func (c *bazClient) EchoI16(
 			return clientErr
 		}, nil)
 		if err == nil {
-			// ckt-breaker was ok, bubble up client error if set
+			// circuit-breaker was ok, bubble up client error if set (and log it)
 			err = clientErr
+			// This is just to debug (temporary)
+			if err != nil {
+				logger.Warn("Client attempt failure: TChannel client call returned error", zap.Error(err))
+			}
 		}
 	}
 
@@ -680,8 +700,12 @@ func (c *bazClient) EchoI32(
 			return clientErr
 		}, nil)
 		if err == nil {
-			// ckt-breaker was ok, bubble up client error if set
+			// circuit-breaker was ok, bubble up client error if set (and log it)
 			err = clientErr
+			// This is just to debug (temporary)
+			if err != nil {
+				logger.Warn("Client attempt failure: TChannel client call returned error", zap.Error(err))
+			}
 		}
 	}
 
@@ -735,8 +759,12 @@ func (c *bazClient) EchoI64(
 			return clientErr
 		}, nil)
 		if err == nil {
-			// ckt-breaker was ok, bubble up client error if set
+			// circuit-breaker was ok, bubble up client error if set (and log it)
 			err = clientErr
+			// This is just to debug (temporary)
+			if err != nil {
+				logger.Warn("Client attempt failure: TChannel client call returned error", zap.Error(err))
+			}
 		}
 	}
 
@@ -790,8 +818,12 @@ func (c *bazClient) EchoI8(
 			return clientErr
 		}, nil)
 		if err == nil {
-			// ckt-breaker was ok, bubble up client error if set
+			// circuit-breaker was ok, bubble up client error if set (and log it)
 			err = clientErr
+			// This is just to debug (temporary)
+			if err != nil {
+				logger.Warn("Client attempt failure: TChannel client call returned error", zap.Error(err))
+			}
 		}
 	}
 
@@ -845,8 +877,12 @@ func (c *bazClient) EchoString(
 			return clientErr
 		}, nil)
 		if err == nil {
-			// ckt-breaker was ok, bubble up client error if set
+			// circuit-breaker was ok, bubble up client error if set (and log it)
 			err = clientErr
+			// This is just to debug (temporary)
+			if err != nil {
+				logger.Warn("Client attempt failure: TChannel client call returned error", zap.Error(err))
+			}
 		}
 	}
 
@@ -900,8 +936,12 @@ func (c *bazClient) EchoStringList(
 			return clientErr
 		}, nil)
 		if err == nil {
-			// ckt-breaker was ok, bubble up client error if set
+			// circuit-breaker was ok, bubble up client error if set (and log it)
 			err = clientErr
+			// This is just to debug (temporary)
+			if err != nil {
+				logger.Warn("Client attempt failure: TChannel client call returned error", zap.Error(err))
+			}
 		}
 	}
 
@@ -955,8 +995,12 @@ func (c *bazClient) EchoStringMap(
 			return clientErr
 		}, nil)
 		if err == nil {
-			// ckt-breaker was ok, bubble up client error if set
+			// circuit-breaker was ok, bubble up client error if set (and log it)
 			err = clientErr
+			// This is just to debug (temporary)
+			if err != nil {
+				logger.Warn("Client attempt failure: TChannel client call returned error", zap.Error(err))
+			}
 		}
 	}
 
@@ -1010,8 +1054,12 @@ func (c *bazClient) EchoStringSet(
 			return clientErr
 		}, nil)
 		if err == nil {
-			// ckt-breaker was ok, bubble up client error if set
+			// circuit-breaker was ok, bubble up client error if set (and log it)
 			err = clientErr
+			// This is just to debug (temporary)
+			if err != nil {
+				logger.Warn("Client attempt failure: TChannel client call returned error", zap.Error(err))
+			}
 		}
 	}
 
@@ -1065,8 +1113,12 @@ func (c *bazClient) EchoStructList(
 			return clientErr
 		}, nil)
 		if err == nil {
-			// ckt-breaker was ok, bubble up client error if set
+			// circuit-breaker was ok, bubble up client error if set (and log it)
 			err = clientErr
+			// This is just to debug (temporary)
+			if err != nil {
+				logger.Warn("Client attempt failure: TChannel client call returned error", zap.Error(err))
+			}
 		}
 	}
 
@@ -1120,8 +1172,12 @@ func (c *bazClient) EchoStructSet(
 			return clientErr
 		}, nil)
 		if err == nil {
-			// ckt-breaker was ok, bubble up client error if set
+			// circuit-breaker was ok, bubble up client error if set (and log it)
 			err = clientErr
+			// This is just to debug (temporary)
+			if err != nil {
+				logger.Warn("Client attempt failure: TChannel client call returned error", zap.Error(err))
+			}
 		}
 	}
 
@@ -1175,8 +1231,12 @@ func (c *bazClient) EchoTypedef(
 			return clientErr
 		}, nil)
 		if err == nil {
-			// ckt-breaker was ok, bubble up client error if set
+			// circuit-breaker was ok, bubble up client error if set (and log it)
 			err = clientErr
+			// This is just to debug (temporary)
+			if err != nil {
+				logger.Warn("Client attempt failure: TChannel client call returned error", zap.Error(err))
+			}
 		}
 	}
 
@@ -1229,8 +1289,12 @@ func (c *bazClient) Call(
 			return clientErr
 		}, nil)
 		if err == nil {
-			// ckt-breaker was ok, bubble up client error if set
+			// circuit-breaker was ok, bubble up client error if set (and log it)
 			err = clientErr
+			// This is just to debug (temporary)
+			if err != nil {
+				logger.Warn("Client attempt failure: TChannel client call returned error", zap.Error(err))
+			}
 		}
 	}
 
@@ -1282,8 +1346,12 @@ func (c *bazClient) Compare(
 			return clientErr
 		}, nil)
 		if err == nil {
-			// ckt-breaker was ok, bubble up client error if set
+			// circuit-breaker was ok, bubble up client error if set (and log it)
 			err = clientErr
+			// This is just to debug (temporary)
+			if err != nil {
+				logger.Warn("Client attempt failure: TChannel client call returned error", zap.Error(err))
+			}
 		}
 	}
 
@@ -1341,8 +1409,12 @@ func (c *bazClient) GetProfile(
 			return clientErr
 		}, nil)
 		if err == nil {
-			// ckt-breaker was ok, bubble up client error if set
+			// circuit-breaker was ok, bubble up client error if set (and log it)
 			err = clientErr
+			// This is just to debug (temporary)
+			if err != nil {
+				logger.Warn("Client attempt failure: TChannel client call returned error", zap.Error(err))
+			}
 		}
 	}
 
@@ -1398,8 +1470,12 @@ func (c *bazClient) HeaderSchema(
 			return clientErr
 		}, nil)
 		if err == nil {
-			// ckt-breaker was ok, bubble up client error if set
+			// circuit-breaker was ok, bubble up client error if set (and log it)
 			err = clientErr
+			// This is just to debug (temporary)
+			if err != nil {
+				logger.Warn("Client attempt failure: TChannel client call returned error", zap.Error(err))
+			}
 		}
 	}
 
@@ -1457,8 +1533,12 @@ func (c *bazClient) Ping(
 			return clientErr
 		}, nil)
 		if err == nil {
-			// ckt-breaker was ok, bubble up client error if set
+			// circuit-breaker was ok, bubble up client error if set (and log it)
 			err = clientErr
+			// This is just to debug (temporary)
+			if err != nil {
+				logger.Warn("Client attempt failure: TChannel client call returned error", zap.Error(err))
+			}
 		}
 	}
 
@@ -1511,8 +1591,12 @@ func (c *bazClient) DeliberateDiffNoop(
 			return clientErr
 		}, nil)
 		if err == nil {
-			// ckt-breaker was ok, bubble up client error if set
+			// circuit-breaker was ok, bubble up client error if set (and log it)
 			err = clientErr
+			// This is just to debug (temporary)
+			if err != nil {
+				logger.Warn("Client attempt failure: TChannel client call returned error", zap.Error(err))
+			}
 		}
 	}
 
@@ -1565,8 +1649,12 @@ func (c *bazClient) TestUUID(
 			return clientErr
 		}, nil)
 		if err == nil {
-			// ckt-breaker was ok, bubble up client error if set
+			// circuit-breaker was ok, bubble up client error if set (and log it)
 			err = clientErr
+			// This is just to debug (temporary)
+			if err != nil {
+				logger.Warn("Client attempt failure: TChannel client call returned error", zap.Error(err))
+			}
 		}
 	}
 
@@ -1616,8 +1704,12 @@ func (c *bazClient) Trans(
 			return clientErr
 		}, nil)
 		if err == nil {
-			// ckt-breaker was ok, bubble up client error if set
+			// circuit-breaker was ok, bubble up client error if set (and log it)
 			err = clientErr
+			// This is just to debug (temporary)
+			if err != nil {
+				logger.Warn("Client attempt failure: TChannel client call returned error", zap.Error(err))
+			}
 		}
 	}
 
@@ -1675,8 +1767,12 @@ func (c *bazClient) TransHeaders(
 			return clientErr
 		}, nil)
 		if err == nil {
-			// ckt-breaker was ok, bubble up client error if set
+			// circuit-breaker was ok, bubble up client error if set (and log it)
 			err = clientErr
+			// This is just to debug (temporary)
+			if err != nil {
+				logger.Warn("Client attempt failure: TChannel client call returned error", zap.Error(err))
+			}
 		}
 	}
 
@@ -1734,8 +1830,12 @@ func (c *bazClient) TransHeadersNoReq(
 			return clientErr
 		}, nil)
 		if err == nil {
-			// ckt-breaker was ok, bubble up client error if set
+			// circuit-breaker was ok, bubble up client error if set (and log it)
 			err = clientErr
+			// This is just to debug (temporary)
+			if err != nil {
+				logger.Warn("Client attempt failure: TChannel client call returned error", zap.Error(err))
+			}
 		}
 	}
 
@@ -1791,8 +1891,12 @@ func (c *bazClient) TransHeadersType(
 			return clientErr
 		}, nil)
 		if err == nil {
-			// ckt-breaker was ok, bubble up client error if set
+			// circuit-breaker was ok, bubble up client error if set (and log it)
 			err = clientErr
+			// This is just to debug (temporary)
+			if err != nil {
+				logger.Warn("Client attempt failure: TChannel client call returned error", zap.Error(err))
+			}
 		}
 	}
 
@@ -1849,8 +1953,12 @@ func (c *bazClient) URLTest(
 			return clientErr
 		}, nil)
 		if err == nil {
-			// ckt-breaker was ok, bubble up client error if set
+			// circuit-breaker was ok, bubble up client error if set (and log it)
 			err = clientErr
+			// This is just to debug (temporary)
+			if err != nil {
+				logger.Warn("Client attempt failure: TChannel client call returned error", zap.Error(err))
+			}
 		}
 	}
 

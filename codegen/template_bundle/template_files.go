@@ -2975,8 +2975,12 @@ type {{$clientName}} struct {
 				return clientErr
 			}, nil)
 			if err == nil {
-				// ckt-breaker was ok, bubble up client error if set
+				// circuit-breaker was ok, bubble up client error if set (and log it)
 				err = clientErr
+				// This is just to debug (temporary)
+				if err != nil {
+					logger.Warn("Client attempt failure: TChannel client call returned error", zap.Error(err))
+				}
 			}
 		}
 
@@ -3024,7 +3028,7 @@ func tchannel_clientTmpl() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "tchannel_client.tmpl", size: 11208, mode: os.FileMode(420), modTime: time.Unix(1, 0)}
+	info := bindataFileInfo{name: "tchannel_client.tmpl", size: 11388, mode: os.FileMode(420), modTime: time.Unix(1, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
